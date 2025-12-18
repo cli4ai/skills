@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "name": "ROUTINE_NAME",
+  "description": "DESCRIPTION_OF_WHAT_THIS_ROUTINE_DOES",
+  "vars": {
+    "example_var": {
+      "description": "Description of this variable",
+      "default": "default_value"
+    }
+  },
+  "steps": [
+    {
+      "id": "step_1",
+      "type": "cli4ai",
+      "package": "PACKAGE_NAME",
+      "command": "COMMAND_NAME",
+      "args": ["{{vars.example_var}}"],
+      "capture": "json"
+    },
+    {
+      "id": "extract",
+      "type": "set",
+      "vars": {
+        "extracted_value": "{{steps.step_1.json.0.fieldName}}"
+      }
+    },
+    {
+      "id": "step_2",
+      "type": "cli4ai",
+      "package": "ANOTHER_PACKAGE",
+      "command": "ANOTHER_COMMAND",
+      "args": ["{{vars.extracted_value}}"],
+      "capture": "json"
+    }
+  ],
+  "result": "{{steps}}"
+}
