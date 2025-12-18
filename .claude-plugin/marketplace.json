@@ -1,0 +1,22 @@
+{
+  "name": "cli4ai-skills",
+  "owner": {
+    "name": "cli4ai",
+    "email": "hello@cli4ai.com"
+  },
+  "metadata": {
+    "description": "Claude Code Skills for cli4ai - AI CLI tool workflows and automation",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "cli4ai-skills",
+      "description": "Skills for building cli4ai routines, workflows, and automation patterns",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/creating-cli4ai-routines"
+      ]
+    }
+  ]
+}
