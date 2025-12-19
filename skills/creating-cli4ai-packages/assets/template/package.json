@@ -1,0 +1,41 @@
+{
+  "name": "@cli4ai/my-package",
+  "version": "1.0.0",
+  "description": "Description of what this tool does",
+  "author": "Your Name",
+  "license": "MIT",
+  "main": "run.ts",
+  "type": "module",
+  "bin": {
+    "my-package": "./run.ts"
+  },
+  "keywords": [
+    "cli4ai",
+    "cli",
+    "ai"
+  ],
+  "dependencies": {
+    "@cli4ai/lib": "^1.0.0",
+    "commander": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "run.ts",
+    "lib/",
+    "cli4ai.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

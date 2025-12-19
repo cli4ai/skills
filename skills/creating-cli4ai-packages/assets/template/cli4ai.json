@@ -1,0 +1,67 @@
+{
+  "name": "my-package",
+  "version": "1.0.0",
+  "entry": "run.ts",
+  "description": "Description of what this tool does",
+  "author": "Your Name",
+  "license": "MIT",
+  "runtime": "node",
+  "keywords": ["cli4ai"],
+
+  "commands": {
+    "list": {
+      "description": "List items",
+      "args": [
+        {
+          "name": "filter",
+          "description": "Optional filter pattern",
+          "required": false
+        }
+      ],
+      "options": [
+        {
+          "name": "limit",
+          "short": "l",
+          "type": "number",
+          "default": 20,
+          "description": "Maximum results to return"
+        }
+      ]
+    },
+    "get": {
+      "description": "Get a single item by ID",
+      "args": [
+        {
+          "name": "id",
+          "description": "Item ID",
+          "required": true
+        }
+      ]
+    }
+  },
+
+  "env": {
+    "API_KEY": {
+      "required": true,
+      "secret": true,
+      "description": "API key for authentication"
+    }
+  },
+
+  "dependencies": {
+    "@cli4ai/lib": "^1.0.0",
+    "commander": "^14.0.0"
+  },
+
+  "mcp": {
+    "enabled": true,
+    "transport": "stdio"
+  },
+
+  "files": [
+    "run.ts",
+    "cli4ai.json",
+    "README.md",
+    "LICENSE"
+  ]
+}

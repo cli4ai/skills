@@ -1,0 +1,7 @@
+node_modules/
+.cli4ai/
+.env
+.env.*
+dist/
+.DS_Store
+*.log

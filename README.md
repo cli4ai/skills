@@ -14,6 +14,7 @@ Learn more about Claude Code Skills in the [official documentation](https://docs
 
 | Skill | Description |
 |-------|-------------|
+| [creating-cli4ai-packages](./skills/creating-cli4ai-packages/) | Create, scaffold, and develop cli4ai CLI tool packages with proper structure, output conventions, and MCP integration |
 | [creating-cli4ai-routines](./skills/creating-cli4ai-routines/) | Create, edit, and debug cli4ai routines - reusable workflows that chain multiple cli4ai commands |
 
 ## Installation
@@ -40,9 +41,10 @@ cp -r skills/creating-cli4ai-routines ~/.claude/skills/
 
 Once installed, skills activate automatically based on context. For example:
 
+- "Create a new cli4ai package for..."
+- "Build a CLI tool that..."
 - "Create a cli4ai routine that..."
 - "Help me build a workflow for..."
-- "Debug this routine..."
 
 ## Prerequisites
 
